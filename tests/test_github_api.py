@@ -19,6 +19,6 @@ def test_repo_can_be_found(github_api):
     assert r['total_count'] == 26
 
 @pytest.mark.api
-def test_repo_cannot_be_foud(github_api):
+def test_repo_cannot_be_found(github_api):
     r = github_api.search_repo('sergiibutenko_repo_non_exist')
     assert r['total_count'] == 0
